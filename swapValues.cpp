@@ -7,7 +7,7 @@ template <typename T> inline void swapValues(T & a, T & b);
 
 template <typename T>
 inline void swapValues(T & a, T & b) {
-	a += 2 * (b - a);
+	a += (b - a) << 1;
 	b -= (a - b);
-	a -= (a - b) / 2;
+	a -= (a - b) >> 1;
 }
